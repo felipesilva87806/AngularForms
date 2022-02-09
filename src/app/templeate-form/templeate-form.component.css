@@ -1,0 +1,5 @@
+/*aqui setamos a cor caso o formulado seja tocado e perda o foco, caso
+o mesmo esteja inválido*/
+/* .ng-invalid.ng-touched:not(form){
+    border: 1px solid red;
+} */
