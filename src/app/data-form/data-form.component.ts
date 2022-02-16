@@ -1,3 +1,4 @@
+import { FormGroup } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-form.component.css']
 })
 export class DataFormComponent implements OnInit {
+
+
+  //formulario: FormGroup;
 
   constructor() { }
 

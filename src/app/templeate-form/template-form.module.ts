@@ -1,8 +1,9 @@
 import { TempleateFormComponent } from './templeate-form.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CompoControlErroComponent } from '../compo-control-erro/compo-control-erro.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -13,7 +14,9 @@ import { CompoControlErroComponent } from '../compo-control-erro/compo-control-e
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule 
   ]
 })
 export class TemplateFormModule { }
