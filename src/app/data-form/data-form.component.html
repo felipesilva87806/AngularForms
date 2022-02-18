@@ -1,14 +1,21 @@
-<form [formGroup]="formulario" (ngSubmit)="onSubmit()"><!-- Linka o formulario criado na component-->
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <!-- Linka o formulario criado na component-->
     <div class="form-group mb-2">
-        <div class="col-sm-12">
+        <div class="col-sm-12" [ngClass]="aplicaCssErro('nome')">
             <label for="nome" class="control-label">Nome</label>
-            <input type="text" class="form-control" placeholder="Nome" required formControlName="nome"><!-- Associa o input ao component-->
+            <input type="text" class="form-control" placeholder="Nome" id="nome" formControlName="nome">
+            <!-- Associa o input ao component-->
+            <app-compo-control-erro [mostrarErro]="verificaValidTouched('nome')" msgErro="Nome é obrigatorio.">
+            </app-compo-control-erro>
         </div>
     </div>
     <div class="form-group mb-2">
         <div class="col-sm-12">
             <label for="email" class="control-label">Email</label>
-            <input type="email" class="form-control" placeholder="nome@email.com" required formControlName="email">
+            <input type="email" class="form-control" placeholder="email@email.com" email id="email"
+                formControlName="email">
+            <app-compo-control-erro [mostrarErro]="verificaValidTouched('email')" msgErro="Email é obrigatorio.">
+            </app-compo-control-erro>
         </div>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>

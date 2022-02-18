@@ -9,7 +9,8 @@ import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
-    TempleateFormComponent
+    TempleateFormComponent,
+
   ],
   imports: [
     CommonModule,
